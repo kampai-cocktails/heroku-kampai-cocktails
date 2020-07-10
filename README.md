@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Kampai Cocktails
 
-## Available Scripts
+(This was created during our time as students at Code Chrysalis.)
 
-In the project directory, you can run:
+On a cold, lonely night, you want to curl up on the sofa and relax with a nice drink...but what should you drink? This app helps you answer that burning question that we all have. You can choose a random drink or search for drinks made with a specific ingredient you may have! Please enjoy, but drink responsibly!
 
-### `yarn start`
+Please drink responsibly at:
+[Kampai Cocktails](https://kampai-cocktails.web.app/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Checkout out our presentation at:
+[CC12 Online API Night with Rakuten RapidAPI](https://youtu.be/Qu_bTj7-abY?t=3118)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Here's a preview of the intro screen:
 
-### `yarn test`
+![Kampai Cocktails1](./kampai1.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### This is a preview of the result screen:
 
-### `yarn build`
+![Kampai Cocktails1](./kampai2.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. Please clone the repo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install packages
 
-### `yarn eject`
+```bash
+yarn install
+yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3.  Find a drink
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4.  Have fun!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Built With
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [React](https://reactjs.org/)
+- [Rakuten Rapid API](https://english.api.rakuten.net/)
+- [Firebase](https://firebase.google.com/)
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+[MIT](https://choosealicense.com/licenses/mit/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Authors
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [Halee Pagel](https://github.com/haleepagel)
+- [Jeff Bentley](https://github.com/jbentleyjp)
+- [Tam Nguyen](https://github.com/softwaredeveloptam)
+- [Garrett Chun](https://github.com/KapakahiCoder)

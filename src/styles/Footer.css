@@ -1,0 +1,38 @@
+.footer {
+  font-size: 10px;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 40%;
+  text-align: center;
+  display: inline-block;
+  font-family: "Antic";
+  color: #143642;
+  border-radius: 40px 10px;
+  background: #f4dbd8;
+  box-shadow: 4px 4px 6px 0px #143642;
+  -webkit-box-shadow: 4px 4px 6px 0px #143642;
+  -moz-box-shadow: 4px 4px 6px 0px #143642;
+}
+.nameLinks {
+  cursor: pointer;
+}
+
+/*
+  COLOR PALETTE
+  
+  BLACK BEAN (DARK BROWN) #2F1000
+  
+  MISTY ROSE (WHITE) #F4DBD8
+  
+  LIVER (DOGS) (ORANGE) #B76935
+  
+  ONYX (GRAY) #383D3B
+  
+  COFFEE (LIGHT BROWN) #6F23B
+  
+  SEAL BROWN (RUST RED) #621B00
+  
+  GUNMETAL (BLUE) #143642
+  
+  */

@@ -1,0 +1,77 @@
+.MainPage {
+  border-radius: 40px 10px;
+  border: none;
+  background: #f4dbd8;
+  color: #143642;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Antic";
+  box-shadow: 4px 4px 6px 0px #143642;
+  -webkit-box-shadow: 4px 4px 6px 0px #143642;
+  -moz-box-shadow: 4px 4px 6px 0px #143642;
+}
+
+.allButtons {
+  background: #621b00;
+  padding: 25px;
+  border-radius: 40px 10px;
+  box-shadow: 4px 4px 6px 0px #143642;
+  -webkit-box-shadow: 4px 4px 6px 0px #143642;
+  -moz-box-shadow: 4px 4px 6px 0px #143642;
+}
+
+.input {
+  border-radius: 5px;
+}
+.buttons {
+  font-family: "Antic";
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #f4dbd8;
+  width: 80px;
+  height: 40px;
+  line-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: -webkit-linear-gradient(#b76935 0%, #2f1000 100%);
+  background-image: linear-gradient(#b76935 0%, #2f1000 100%);
+  text-shadow: 1px 1px 1px #2f1000;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+}
+
+.buttons:active {
+  -ms-transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  background-image: -webkit-linear-gradient(#b76935 0%, #2f1000 100%);
+  background-image: linear-gradient(#b76935 0%, #2f1000 100%);
+}
+
+/*
+  COLOR PALETTE
+  
+  BLACK BEAN (DARK BROWN) #2F1000
+  
+  MISTY ROSE (WHITE) #F4DBD8
+  
+  LIVER (DOGS) (ORANGE) #B76935
+  
+  ONYX (GRAY) #383D3B
+  
+  COFFEE (LIGHT BROWN) #6F23B
+  
+  SEAL BROWN (RUST RED) #621B00
+  
+  GUNMETAL (BLUE) #143642
+  
+  */
