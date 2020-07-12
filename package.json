@@ -5,6 +5,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "heroku": "^7.42.2",
     "knex": "^0.21.1",
@@ -20,7 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "yarn && yarn run build"
+    "heroku-postbuild": "yarn && yarn run build",
+    "migrate": "knex migrate:latest --knexfile models/knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile models/knexfile.js"
   },
   "eslintConfig": {
     "extends": "react-app"
