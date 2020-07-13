@@ -25,6 +25,24 @@ app.get("/api/users", async (req, res) => {
   }
 });
 
+app.get("/api/users/:id", async (req, res) => {
+  try {
+    console.log(
+      "A request to grab one user has been made.\nUser ID: ",
+      req.body.id
+    );
+
+    const user = await knex(db).table("users").where("id", req.body.id).first();
+
+    console.log("This is the user\n", user);
+
+    res.json(user).status(200);
+  } catch (err) {
+    console.error("Error grabbing one user from database.", err);
+    res.sendStatus(500);
+  }
+});
+
 app.post("/api/user", (req, res) => {
   try {
     console.log("A post request was made below.\n", req.body);
