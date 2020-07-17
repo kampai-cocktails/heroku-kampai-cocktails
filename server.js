@@ -4,13 +4,16 @@ const knex = require("knex");
 const db = require("./models/knexfile");
 const app = express();
 const port = process.env.PORT || 3000;
+const cors = require("cors");
+
 // const publicPath = path.join(__dirname, "..", ".\\Kampai-Cocktails\\public");
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, "build")));
 app.use(express.json());
+app.use(cors());
 
-// Here are all the API routes (router folder??)
+// Here are all the API routes
 // Figure out, register (or sign up), sign in, display favorite drinks.
 
 app.get("/api/users", async (req, res) => {

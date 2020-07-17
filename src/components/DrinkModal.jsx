@@ -5,7 +5,7 @@ import "../styles/modal.css";
 function checkIngredients(fullDrinkInfo) {
   let measureIngredientPairs = {};
 
-  for (let i = 1; i <= 15; i++) {
+  for (let i = 0; i <= 15; i++) {
     if (fullDrinkInfo[`strIngredient${i}`] !== null) {
       measureIngredientPairs[fullDrinkInfo[`strMeasure${i}`]] =
         fullDrinkInfo[`strIngredient${i}`];
