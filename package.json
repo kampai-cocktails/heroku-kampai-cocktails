@@ -16,12 +16,11 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "yarn run build && node server.js",
     "start:hack": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "yarn && yarn run build",
     "migrate": "knex migrate:latest --knexfile models/knexfile.js",
     "rollback": "knex migrate:rollback --knexfile models/knexfile.js"
   },
