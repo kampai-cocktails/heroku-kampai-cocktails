@@ -1,5 +1,6 @@
 exports.up = function (knex) {
   return knex.schema.createTable("users", (table) => {
+    
     // unique ID
     table.increments().index();
 

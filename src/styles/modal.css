@@ -98,6 +98,10 @@
   background-image: linear-gradient(#b76935 0%, #2f1000 100%);
 }
 
+.signin-field {
+  border-radius: 5px;
+}
+
 /*
 COLOR PALETTE
 
