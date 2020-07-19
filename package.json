@@ -2,16 +2,12 @@
   "name": "kampai-cocktail",
   "version": "0.1.0",
   "dependencies": {
-    "@aws-amplify/ui-react": "^0.2.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "aws-amplify": "^3.0.20",
-    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "heroku": "^7.42.2",
-    "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.1",
     "pg": "^8.2.1",
     "react": "^16.13.1",
@@ -20,11 +16,12 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "yarn run build && node server.js",
+    "start": "node server.js",
     "start:hack": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "heroku-postbuild": "yarn && yarn run build",
     "migrate": "knex migrate:latest --knexfile models/knexfile.js",
     "rollback": "knex migrate:rollback --knexfile models/knexfile.js"
   },
@@ -44,7 +41,6 @@
     ]
   },
   "devDependencies": {
-    "nodemon": "^2.0.4",
     "prettier": "^2.0.5"
   }
 }
