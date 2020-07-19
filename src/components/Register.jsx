@@ -1,15 +1,10 @@
 import { Auth } from "aws-amplify";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import ConfirmRegister from "./ConfirmRegister";
 import "../styles/modal.css";
 
 async function signUp(username, password, email, name) {
-  // let username = "djwannabe33@hotmail.com";
-  // let password = "12345678jeff!@#JEFF";
-  // let email = "djwannabe33@hotmail.com";
-  // let name = "jeff";
-  // let phone_number = "+18422394029";
-
   try {
     const user = await Auth.signUp({
       username,
@@ -22,6 +17,10 @@ async function signUp(username, password, email, name) {
       },
     });
     console.log({ user }, "<-- this is the user's registration info");
+
+    // do stuff to send user's info to middleware test and routes to database
+    // then return a jwt token to see if it has access to their dashboard
+
     return user;
   } catch (error) {
     console.log("error signing up:", error);
@@ -36,9 +35,8 @@ function RegisterModal(props) {
   return (
     <div className="modal">
       <div className="modal-content">
-        <p>hello</p>
+        <h5>Register your Account 🍸</h5>
         {console.log("hello")}
-
         <div className="signup-field">
           <input
             type="email"
@@ -48,7 +46,7 @@ function RegisterModal(props) {
               setSignupMail(e.target.value);
             }}
           ></input>
-          <label for="signup-email">Email address</label>
+          {/* <label for="signup-email">Email address</label> */}
         </div>
         <div className="signup-field">
           <input
@@ -59,7 +57,7 @@ function RegisterModal(props) {
               setPassword(e.target.value);
             }}
           ></input>
-          <label for="signup-password">Choose password</label>
+          {/* <label for="signup-password">Choose password</label> */}
         </div>
         <div className="signup-field">
           <input
@@ -70,9 +68,9 @@ function RegisterModal(props) {
               setName(e.target.value);
             }}
           ></input>
-          <label for="signup-password">Name</label>
+          {/* <label for="signup-password">Name</label> */}
         </div>
-
+        <br></br>
         <button
           type="button"
           className="button"
@@ -81,15 +79,16 @@ function RegisterModal(props) {
             signUp(signupMail, password, signupMail, name).then(
               (credentials) => {
                 console.log(credentials);
-                // do stuff here
+                // do stuff here, if successful, they need to enter their code.
               }
             );
-            props.setShowRegisterModal(false);
+            props.setConfirmCodeModal(true);
+            // props.setShowRegisterModal(false);
           }}
         >
           Register
         </button>
-
+        &nbsp;&nbsp;
         <button
           type="button"
           className="button"
@@ -100,6 +99,14 @@ function RegisterModal(props) {
         >
           Close
         </button>
+        {props.showConfirmCodeModal ? (
+          <ConfirmRegister
+            setShowRegisterModal={props.setShowRegisterModal}
+            showRegisterModal={props.showRegisterModal}
+            setConfirmCodeModal={props.setConfirmCodeModal}
+            showConfirmCodeModal={props.showConfirmCodeModal}
+          />
+        ) : null}
       </div>
     </div>
   );

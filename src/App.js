@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/App.css";
 import Topbar from "./components/Topbar";
 import Navbar from "./components/Navbar.jsx";
@@ -13,10 +13,19 @@ import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 Amplify.configure(awsconfig);
 
 function App() {
+  const [loginState, setLoginState] = useState(false);
+  const [globalUser, setGlobalUser] = useState({});
+
   return (
     <div className="App">
       {/* <AmplifySignOut /> */}
-      <Topbar className="topbar" />
+      <Topbar
+        className="topbar"
+        loginState={loginState}
+        setLoginState={setLoginState}
+        globalUser={globalUser}
+        setGlobalUser={setGlobalUser}
+      />
       <Navbar className="navbar" />
       <MainPage className="mainPage" />
       <Footer />

@@ -4,9 +4,7 @@ import ReactDOM from "react-dom";
 import "../styles/modal.css";
 
 async function Login(username, password) {
-  // username = "garrettkchun@yahoo.com";
-  // password = "12345678garrett!@#GARRETT";
-
+  // console.log(username, password, "username and password");
   try {
     const user = await Auth.signIn(username, password);
     return user;
@@ -15,6 +13,8 @@ async function Login(username, password) {
   }
 }
 
+// got to format the sign in modal to make it look better
+
 function SignInModal(props) {
   const [signinMail, setSignInMail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,46 +22,51 @@ function SignInModal(props) {
   return (
     <div className="modal">
       <div className="modal-content">
-        <p>hello</p>
-        {console.log("hello")}
-
-        <div className="signup-field">
+        <h5>Please Sign-In 🍸</h5>
+        {console.log("hello from SignIn")}
+        <div className="signin-field">
           <input
             type="email"
-            id="signup-email"
-            placeholder="Input your email"
+            // id="signin-email"
+            placeholder="Enter your email"
             onChange={(e) => {
               setSignInMail(e.target.value);
             }}
           ></input>
-          <label for="signup-email">Email address</label>
         </div>
-        <div className="signup-field">
+        <br></br>
+        <div className="signin-field">
           <input
             type="password"
-            id="signup-password"
-            placeholder="Input a password"
+            // id="signin-password"
+            placeholder="Enter a password"
             onChange={(e) => {
               setPassword(e.target.value);
             }}
           ></input>
-          <label for="signup-password">Choose password</label>
         </div>
-
+        <br></br>
         <button
           type="button"
           className="button"
           onClick={(e) => {
             e.preventDefault();
-            Login(signinMail, password).then((credentials) => {
-              console.log(credentials);
-            });
+            Login(signinMail, password)
+              .then((credentials) => {
+                console.log(credentials, "This is the credentials");
+                // console.log(credentials.attributes.name, "This is the name");
+                props.setLoginState(true);
+                props.setGlobalUser({ name: credentials.attributes.name });
+              })
+              .catch((err) => {
+                console.log(err, "Was not able to login");
+              });
             props.setShowSignInModal(false);
           }}
         >
           Sign In
         </button>
-
+        &nbsp;&nbsp;
         <button
           type="button"
           className="button"

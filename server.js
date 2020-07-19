@@ -16,6 +16,8 @@ app.use(cors());
 // Here are all the API routes
 // Figure out, register (or sign up), sign in, display favorite drinks.
 
+// Add that users can add/delete their favorite drinks, and allowing to grab all saved drinks
+
 app.get("/api/users", async (req, res) => {
   try {
     console.log("A request for all users in db was made.");
