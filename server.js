@@ -9,9 +9,10 @@ const cors = require("cors");
 // const publicPath = path.join(__dirname, "..", ".\\Kampai-Cocktails\\public");
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, "build")));
+
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, "build")));
 
 // Here are all the API routes
 // Figure out, register (or sign up), sign in, display favorite drinks.
