@@ -1,11 +1,6 @@
 {
   "name": "kampai-cocktail",
   "version": "0.1.0",
-  "engines": {
-    "node": "12.x",
-    "yarn": "1.x",
-    "npm": "6.x"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
