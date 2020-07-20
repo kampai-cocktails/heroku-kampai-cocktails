@@ -6,9 +6,6 @@ import MainPage from "./components/MainPage.jsx";
 import Footer from "./components/Footer.jsx";
 import Amplify, { Auth } from "aws-amplify";
 import awsconfig from "./aws-exports";
-import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
-
-// remove @aws-amplify/ui-react for later
 
 Amplify.configure(awsconfig);
 
