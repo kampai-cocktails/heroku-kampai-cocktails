@@ -37,7 +37,11 @@ yarn start
 
 - [React](https://reactjs.org/)
 - [Rakuten Rapid API](https://english.api.rakuten.net/)
-- [Firebase](https://firebase.google.com/)
+- [Heroku](https://www.heroku.com/)
+- [AWS Cognito] (https://aws.amazon.com/cognito/)
+- [AWS Amplify] (https://aws.amazon.com/amplify/)
+- [PostgreSQL] (https://www.postgresql.org/)
+- [Knex.js] (http://knexjs.org/)
 
 ## Contributing
 
